@@ -3,13 +3,18 @@
     <head>
         <title>freeyourmind</title>
         <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main-page.css">
+        <script src="js/functionality.js"></script>
     </head>
     <body>
         <header>
-            <h1>freeyourmind</h1>
-            <section id="section05" class="demo">
+            <h1 onclick="smooth_scroll('#stress-of-today')">freeyourmind</h1>
+            <section class="demo right-arrow">
                 <a href="#stress-of-today"><span></span></a>
+            </section>
+            <section class="demo down-arrow">
+                <span onclick="smooth_scroll('#stress-of-today')"></span></a>
             </section>
         </header>
         <main>

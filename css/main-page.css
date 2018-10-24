@@ -21,8 +21,9 @@ header {
 }
 
 header h1 {
+    display: inline-block;
     font-size: 6em;
-    position: relative;
+    position: absolute;
     top: 40%;
     left: 100px;
     color: #fff;
@@ -41,7 +42,7 @@ header section {
     margin: 0;
 }
 
-header section::after {
+/*header section::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -50,30 +51,30 @@ header section::after {
     height: 80%;
     padding: 0;
     margin: 0;
-    /*background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);*/
-}
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}*/
 
 /* Classes */
-#section05 {
+.right-arrow {
     height: 100px;
     width: 100px;
-    position: relative;
-    top: 25%;
+    position: absolute;
+    top: 41%;
     left: calc(100% - 200px);
     background: #42f4a1;
     padding: 0;
     margin: 0;
 }
 
-#section05 a {
+.right-arrow a {
     width: 50%;
     height: 50%;
     padding: 0;
     margin: 0;
     top: 50%;
 }
-#section05 a span {
+.right-arrow span {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -82,8 +83,41 @@ header section::after {
     border-bottom: 3px solid #000;
     /*-webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);*/
-    -webkit-animation: sdb05 1.5s infinite;
-    animation: sdb05 1.5s infinite;
+    -webkit-animation: rarrow 1.5s infinite;
+    animation: rarrow 1.5s infinite;
+    box-sizing: border-box;
+}
+
+.down-arrow {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: calc(100% - 200px);
+    left: 49%;
+    background: #42f4a1;
+    padding: 0;
+    margin: 0;
+}
+
+.down-arrow span {
+    width: 50%;
+    height: 50%;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+}
+
+.down-arrow span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /*margin-left: -12px;*/
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+    /*-webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);*/
+    -webkit-animation: darrow 1.5s infinite;
+    animation: darrow 1.5s infinite;
     box-sizing: border-box;
 }
 
@@ -105,7 +139,7 @@ header section::after {
     opacity: .5;
   }
 
-@-webkit-keyframes sdb05 {
+@-webkit-keyframes rarrow {
     0% {
       -webkit-transform: translate(0, 0);
       opacity: 0;
@@ -119,7 +153,7 @@ header section::after {
     }
 }
 
-@keyframes sdb05 {
+@keyframes rarrow {
     0% {
       transform: rotate(-135deg) translate(0, 0);
       opacity: 0;
@@ -129,6 +163,34 @@ header section::after {
     }
     100% {
       transform: rotate(-135deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+}
+
+@-webkit-keyframes darrow {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(-20px, 20px);
+      opacity: 0;
+    }
+}
+
+@keyframes darrow {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
       opacity: 0;
     }
 }
