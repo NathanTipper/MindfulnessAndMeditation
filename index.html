@@ -9,18 +9,68 @@
     </head>
     <body>
         <header>
-            <h1 onclick="smooth_scroll('#stress-of-today')">freeyourmind</h1>
-            <section class="demo right-arrow">
-                <a href="#stress-of-today"><span></span></a>
-            </section>
-            <section class="demo down-arrow">
-                <span onclick="smooth_scroll('#stress-of-today')"></span></a>
-            </section>
+            <!-- <div id="front-page-header">
+                <h1>freeyourmind</h1>
+                <section class="arrow right-arrow">
+                    <p class="right-arrow-text">Skip</p>
+                    <a href="#stress-of-today"><span></span></a>
+                </section>
+                <section class="arrow down-arrow" onclick="smooth_scroll('#stress-of-today')">
+                    <span></span>
+                    <p class="down-arrow-text">Continue</p>
+                </section>
+            </div> -->
         </header>
         <main>
-            <section id="stress-of-today" class="stress-of-today-container">
-                
+            <!-- <section id="stress-of-today" class="stress-of-today-container">
+                <p class="stress-info-text">The State of Stress Today</h1>
+            </section> -->
+            <section id="stress-info">
+                <h2>How Stress Affects Us</h2>
+                <div class="stress-info-grid-container-4">
+                    <p id="stress-item-1">One of the difficulties with stress is that people experience stress in different ways. 
+                        This contributes to stress manifesting itself differently. So it would be wrong to over generalise when giving 
+                        advice on how to identify stress in others. However, what we can say is that because stress has negative effects, 
+                        it will usually manifest itself one way or another. <br><br>
+                        Stress targets the weakest part of our physiology or character; 
+                        if you are prone to headaches or eczema, this will flare up.  If you have low levels of patience or tolerance for others, 
+                        this will be the first area to present under times of stress. Stress isn’t avoidable but it is manageable. A key action 
+                        in order to minimise risk is to identify stress-related problems as early as possible, so that action can be taken before
+                        serious stress-related illness occurs.
+                    </p>
+                    <a id="stress-item-2" href="https://www.youtube.com/watch?v=pXRviuL6vMY" target="_blank"><img src="./imgs/twenty-one-pilots-stressed-out.jpg"></a>
+                </div>
+                <h2 class="stress-sub-header">There Will Be Changes in the Stressed Person</h2>
+                <div class="stress-info-grid-container-4">
+                    <p id="stress-item-3"> These changes may be emotional, physical or behavioural, or a combination of all three. So, the key thing is to look out 
+                        for negative changes of any kind. Bear in mind that the negative changes are also likely to have knock-on effects e.g. 
+                        reduced performance at work.
+                    </p>
+                    <p id="stress-item-4">
+                        Of course, we all experience ‘bad days’, so we are really talking about situations where people display these negative 
+                        changes for a period of time (e.g. 5 days in a row).
+                    </p>
+                    <p id="stress-item-5">
+                        Prolonged stress undoubtedly makes people ill. It is now known to contribute to heart disease, hypertension and 
+                        high blood pressure, it affects the immune system, is linked to strokes, IBS (Irritable Bowel Syndrome), ulcers, 
+                        diabetes, muscle and joint pain, miscarriage, allergies, alopecia and even premature tooth loss. For more detail
+                        about how stress affects the body, please take a few minutes to watch the video presented by TED talks.
+                    </p>
+                    <iframe id="stress-item-6" width="100%" src="https://www.youtube.com/embed/WuyPuH9ojCE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <p id="stress-item-7">Want to learn a way to manage stress and be more relaxed?</p>
+                    <div id="stress-item-8">
+                        <a href="html/what-is-mind-med.html">
+                            <div class="right-arrow-2"></div>
+                        </a>
+                        <p class="right-arrow-2-text">Continue to next page</p>
+                    </div>
+                </div>
             </section>
         </main>
     </body>
+    <script>
+        window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+        }
+    </script>
 </html>
