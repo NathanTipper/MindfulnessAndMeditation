@@ -15,7 +15,8 @@ function smooth_scroll(target) {
 		stressInfoText.addEventListener("animationend", stressTitleAnimationEnd, false);
 		setTimeout(function() {
 			document.querySelector("#front-page-header").style.display = "none";
-		}, 1000);
+			document.querySelector(target).scrollIntoView( {behavior: 'instant', block: 'start'});
+		}, 5000);
 	}
 	document.querySelector(target).scrollIntoView({ behavior: 'smooth', block: "start"});
 }
@@ -28,7 +29,7 @@ function stressTitleAnimationEnd() {
 }
 
 function pauseFactsAnimation() {
-	setTimeout(() => { 
+	setTimeout(function() { 
 		stressInfoText.classList.add("fact-animation");
 		stressInfoText.innerHTML = stressInfo[stressInfoIndex++];
 		stressInfoText.addEventListener("animationiteration", stressFactIterationEnd, false);
@@ -48,8 +49,9 @@ function stressFactIterationEnd() {
 
 function stressFactAnimationEnd() {
 	smooth_scroll("#stress-info");
-	setTimeout(() => {
+	setTimeout(function() {
 		document.querySelector("#stress-of-today").style.display = "none";
+		document.querySelector("#stress-info").scrollIntoView({ behavior: 'instant', block: 'start'});
 	}, 1000);
 	document.querySelector("body").style.overflow = "scroll";
 }

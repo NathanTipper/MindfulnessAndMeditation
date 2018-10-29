@@ -1,3 +1,5 @@
+/* TAGS */
+
 * {
     box-sizing: border-box;
 }
@@ -10,4 +12,54 @@ body {
     margin: 0;
     padding: 0;
     background: #42f4a1;
+}
+
+nav {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	background: #29b26d;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+	margin-top: 20px;
+	font-size: 1.2em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+/* CLASSES */
+.home {
+	margin-right: 25%;
+	margin-left: 2%;
+	font-size: 1.8em;
+}
+
+.home a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.active {
+	text-shadow: 0 0 0.2em #FFFF00, 0 0 0.2em #FFFF00;
+}
+.active:hover {
+	cursor: default;
+}
+
+/* IDS */
+#random-div {
+	height: 2000px;
 }
